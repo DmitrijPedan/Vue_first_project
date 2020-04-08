@@ -1,14 +1,15 @@
 <template>
     <li>
-       <a href="">
-            {{ item.name.first}}
-        </a>
+       <a href="">{{ number + 1 }} {{ item.name.first}} {{ item.name.last}}</a>
     </li>
 </template>
 
 <script>
 export default {
     props: {
+        number: {
+            type: Number
+        },
         item: {
             type: Object,
             required: true

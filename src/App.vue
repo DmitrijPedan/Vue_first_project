@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <Header/>
-    <Sidebar v-bind:data = "users" />
-    <Main/>
+    <Header class="header"/>
+    <Sidebar class="aside" v-bind:data = "users" />
+    <Main class="main"/>
+    <Footer class="footer"/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Main from './components/Main'
+import Footer from './components/Footer'
 import {fetchUsers} from './services/fetchUsers'
 export default {
   name: 'App',
@@ -27,11 +29,27 @@ export default {
   components: {
     Header,
     Sidebar,
-    Main
+    Main,
+    Footer
   }
 }
 </script>
 
 <style lang="scss">
-
+  #app {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .header {
+    grid-column: span 12;
+  }
+  .aside {
+    grid-column: span 2;
+  }
+  .main {
+    grid-column: span 10;
+  }
+  .footer {
+    grid-column: span 12;
+  }
 </style>

@@ -2,7 +2,7 @@
     <div>
         <p>Menu:</p>
         <ul>
-            <MenuItem v-for="(item, i) in data" :key="i+1" :item="item"/>
+            <MenuItem v-for="(item, i) in data" :key="i+1" :item="item" :number="i"/>
         </ul>
     </div>
 </template>

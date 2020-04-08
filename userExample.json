@@ -1,0 +1,56 @@
+{
+    "gender": "male",
+    "name": {
+        "title": "Monsieur",
+        "first": "Tom",
+        "last": "Lambert"
+    },
+    "location": {
+        "street": {
+            "number": 4479,
+            "name": "Rue Denfert-Rochereau"
+        },
+        "city": "Hallwil",
+        "state": "Uri",
+        "country": "Switzerland",
+        "postcode": 4300,
+        "coordinates": {
+            "latitude": "-52.7569",
+            "longitude": "-172.4177"
+        },
+        "timezone": {
+            "offset": "+4:30",
+            "description": "Kabul"
+        }
+    },
+    "email": "tom.lambert@example.com",
+    "login": {
+        "uuid": "e7a7a5dc-aa17-4b78-b352-afe6584ff319",
+        "username": "goldencat701",
+        "password": "christian",
+        "salt": "PMhESEH0",
+        "md5": "d76233751444e3689cf185bcdb28b68e",
+        "sha1": "e1cf80dde56d64bca1404473c9e92b9c6d3c4789",
+        "sha256": "a128976d223926683fc3794a18010225052da01c83f04ac282955c4c4d40b81f"
+    },
+    "dob": {
+        "date": "1998-04-22T13:29:57.159Z",
+        "age": 22
+    },
+    "registered": {
+        "date": "2017-10-24T18:27:47.816Z",
+        "age": 3
+    },
+    "phone": "077 299 20 66",
+    "cell": "076 224 81 14",
+    "id": {
+        "name": "AVS",
+        "value": "756.4087.1934.93"
+    },
+    "picture": {
+        "large": "https://randomuser.me/api/portraits/men/38.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/38.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/38.jpg"
+    },
+    "nat": "CH"
+}

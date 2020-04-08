@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <Sidebar v-bind:data = "peoples" />
+    <Sidebar v-bind:data = "users" />
     <Main/>
   </div>
 </template>
@@ -10,19 +10,19 @@
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Main from './components/Main'
+import {fetchUsers} from './services/fetchUsers'
 export default {
   name: 'App',
   data () {
     return {
-      peoples: []
+      users: []
     }
   },
   mounted () {
-      fetch('https://randomuser.me/api/?results=20')
-      .then(res => res.json())
-      .then(json => {
-        this.peoples = json.results
-      })
+      (async () => {
+        const data = await fetchUsers();
+        this.users = data.results;
+      })()
   },
   components: {
     Header,

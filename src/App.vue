@@ -14,14 +14,15 @@ export default {
   name: 'App',
   data () {
     return {
-      peoples: [
-        { id: 1, fullName: 'Oleh Lev', position: 'Web Dev', skill: 'PHP,JS', exp: 3, sex: 'Male', salary: 4500 },
-        { id: 2, fullName: 'John White', position: 'Web Dev', skill: 'PHP', exp: 1, sex: 'Male', salary: 1200 },
-        { id: 3, fullName: 'Jany Rad', position: 'Sale', skill: '-', exp: 2, sex: 'Famale', salary: 3500 },
-        { id: 4, fullName: 'Ivan Brown', position: 'iOS', skill: 'Swift', exp: 3, sex: 'Male', salary: 4000 },
-        { id: 5, fullName: 'Pet Bool', position: 'Android', skill: 'Java', exp: 2, sex: 'Male', salary: 3520 },
-      ],
+      peoples: []
     }
+  },
+  mounted () {
+      fetch('https://randomuser.me/api/?results=20')
+      .then(res => res.json())
+      .then(json => {
+        this.peoples = json.results
+      })
   },
   components: {
     Header,

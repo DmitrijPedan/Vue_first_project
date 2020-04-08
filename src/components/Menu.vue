@@ -1,11 +1,8 @@
 <template>
     <div>
-        <p>
-            {{data}}
-        </p>
         <p>Menu:</p>
         <ul>
-            <MenuItem v-for="item in data" v-bind:key="item.id" v-bind:item="item"/>
+            <MenuItem v-for="(item, i) in data" :key="i+1" :item="item"/>
         </ul>
     </div>
 </template>

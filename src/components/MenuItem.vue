@@ -1,7 +1,7 @@
 <template>
     <li>
        <a href="">
-            {{ item.fullName}}
+            {{ item.name.first}}
         </a>
     </li>
 </template>

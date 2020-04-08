@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <Sidebar/>
+    <Sidebar v-bind:data = "peoples" />
     <Main/>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
         { id: 3, fullName: 'Jany Rad', position: 'Sale', skill: '-', exp: 2, sex: 'Famale', salary: 3500 },
         { id: 4, fullName: 'Ivan Brown', position: 'iOS', skill: 'Swift', exp: 3, sex: 'Male', salary: 4000 },
         { id: 5, fullName: 'Pet Bool', position: 'Android', skill: 'Java', exp: 2, sex: 'Male', salary: 3520 },
-      ]
+      ],
     }
   },
   components: {

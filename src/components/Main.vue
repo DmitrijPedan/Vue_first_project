@@ -2,8 +2,8 @@
     <main>
       <div >
         <UserCard 
-          v-if="data.length"
-          v-bind:data = "data" />
+          v-if="user"
+          v-bind:user = "user" />
         <p v-else>Click on user to get more info!</p>
       </div>
     </main>
@@ -13,7 +13,7 @@
 import UserCard from './UserCard'
 export default {
   name: 'Main',
-  props: ['data'],
+  props: ['user'],
   components: {
     UserCard,
   }

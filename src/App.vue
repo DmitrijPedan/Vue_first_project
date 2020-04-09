@@ -8,7 +8,7 @@
         v-bind:data = "allUsers" 
         v-on:selectUser="selectUser"/>
       <Main  
-        v-bind:data = "selectedUsers" 
+        v-bind:user = "selectedUsers" 
         v-bind:loading = "loading"/>
     </div>
     <Footer class="footer"/>
@@ -22,18 +22,20 @@ import Sidebar from './components/Sidebar'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import {fetchUsers} from './services/fetchUsers'
+
 export default {
   name: 'App',
   data () {
     return {
       allUsers: [],
       loading: true,
-      selectedUsers: [],
+      selectedUsers: null,
     }
   },
   methods: {
-    selectUser(id) {   
-        this.selectedUsers = this.allUsers.filter(el => el.login.uuid === id);
+    selectUser(id) {
+        const select = this.allUsers.filter(el => el.login.uuid === id);
+        this.selectedUsers = select[0]
     }
   },
   mounted () {
@@ -42,7 +44,6 @@ export default {
         setTimeout(()=>{
           this.allUsers = data.results;
           this.loading = false;
-          console.log('>>>>>>app mounted');
         }, 1000)
       })()
   },
@@ -50,6 +51,7 @@ export default {
     Header, Loader, Sidebar, Main, Footer
   }
 }
+
 </script>
 
 <style lang="scss">

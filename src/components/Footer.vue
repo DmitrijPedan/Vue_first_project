@@ -9,3 +9,15 @@ export default {
     name: 'Footer'
 }
 </script>
+
+<style lang="scss" scoped>
+    footer {
+        text-align: center;
+        background-color: silver;
+    }
+    h5 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        margin: 10px;
+    }
+</style>

@@ -19,5 +19,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .sidebar {
+    padding: 10px;
+  }
 </style>

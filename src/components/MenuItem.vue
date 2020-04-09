@@ -1,6 +1,6 @@
 <template>
     <li>
-       <a href="">{{ number + 1 }} {{ item.name.first}} {{ item.name.last}}</a>
+        <span>{{ number + 1 }} {{ item.name.first}} {{ item.name.last}}</span>
     </li>
 </template>
 
@@ -22,5 +22,12 @@ export default {
 <style lang="scss" scoped>
     li {
         list-style: none;
+        font-family: Arial, Helvetica, sans-serif;
+        color: gray;
+        cursor: pointer;
+        margin: 3px;
+    }
+    li :hover {
+        color: orange;
     }
 </style>

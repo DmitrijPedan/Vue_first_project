@@ -22,5 +22,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+    ul {
+        padding: 0;
+    }
+    p {
+        margin: 3px;
+        color: orange;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
 </style>

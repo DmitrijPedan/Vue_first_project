@@ -2,7 +2,7 @@
   <div id="app">
     <Header class="header"/>
     <Sidebar class="aside" v-bind:data = "users" />
-    <Main class="main"/>
+    <Main class="main" v-bind:data = "users[5]"/>
     <Footer class="footer"/>
   </div>
 </template>
@@ -44,10 +44,10 @@ export default {
     grid-column: span 12;
   }
   .aside {
-    grid-column: span 2;
+    grid-column: span 3;
   }
   .main {
-    grid-column: span 10;
+    grid-column: span 9;
   }
   .footer {
     grid-column: span 12;

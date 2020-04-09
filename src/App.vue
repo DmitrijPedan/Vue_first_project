@@ -3,13 +3,14 @@
     <Header class="header"/>
     <Loader 
       v-if= "loading"/>
-    <Sidebar class="aside" 
-      v-else-if = "!loading"
-      v-bind:data = "allUsers" 
-      v-on:selectUser="selectUser"/>
-    <Main class="main" 
-      v-bind:data = "selectedUsers" 
-      v-bind:loading = "loading"/>
+    <div class="main" v-else>
+      <Sidebar class="aside" 
+        v-bind:data = "allUsers" 
+        v-on:selectUser="selectUser"/>
+      <Main  
+        v-bind:data = "selectedUsers" 
+        v-bind:loading = "loading"/>
+    </div>
     <Footer class="footer"/>
   </div>
 </template>
@@ -46,30 +47,18 @@ export default {
       })()
   },
   components: {
-    Header,
-    Loader,
-    Sidebar,
-    Main,
-    Footer
+    Header, Loader, Sidebar, Main, Footer
   }
 }
 </script>
 
 <style lang="scss">
-  #app {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-  }
-  .header {
-    grid-column: span 12;
-  }
-  .aside {
-    grid-column: span 2;
+  body {
+    margin: 0;
+    padding: 0;
   }
   .main {
-    grid-column: span 10;
-  }
-  .footer {
-    grid-column: span 12;
+    display: grid;
+    grid-template-columns: 20% 1fr;
   }
 </style>

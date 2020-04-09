@@ -1,5 +1,5 @@
 <template>
-    <li>
+    <li v-on:click="$emit('selectUser', item.login.uuid)">
         <span>{{ number + 1 }} {{ item.name.first}} {{ item.name.last}}</span>
     </li>
 </template>

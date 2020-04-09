@@ -14,6 +14,9 @@ export default {
     footer {
         text-align: center;
         background-color: silver;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
     }
     h5 {
         font-family: Arial, Helvetica, sans-serif;

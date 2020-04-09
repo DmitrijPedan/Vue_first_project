@@ -2,7 +2,13 @@
     <div>
         <p>Menu:</p>
         <ul>
-            <MenuItem v-for="(item, i) in data" :key="i+1" :item="item" :number="i"/>
+            <MenuItem 
+                v-for="(item, i) in data" 
+                v-bind:key="i+1" 
+                v-bind:item="item" 
+                v-bind:number="i"
+                v-on:selectUser="selectUser"   
+            />
         </ul>
     </div>
 </template>
@@ -15,9 +21,11 @@ export default {
     components: {
         MenuItem,
     },
-    log: function () {
-    console.log(this.data)
-    },
+    methods: {
+        selectUser(id) {
+            this.$emit('selectUser', id)
+        }
+    }
 }
 </script>
 

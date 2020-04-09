@@ -1,33 +1,30 @@
 <template>
     <main>
-      <div class="title">
-        <p>User info:</p>
-        <!-- <Loader/> -->
-        <UserCard v-bind:data = "data"/>
+      <div >
+        <UserCard 
+          v-if="data.length"
+          v-bind:data = "data" />
+        <p v-else>Click on user to get more info!</p>
       </div>
-      
     </main>
 </template>
 
 <script>
-import Loader from './Loader'
 import UserCard from './UserCard'
 export default {
   name: 'Main',
   props: ['data'],
   components: {
-    Loader,
     UserCard,
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  .title {
+  p {
     text-align: center;
     color: orange;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    text-transform: uppercase;
   }
 </style>

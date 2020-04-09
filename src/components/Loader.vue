@@ -1,8 +1,15 @@
 <template>
-<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <div class="loader-wrapper">
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
+    .loader-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .lds-roller {
     display: inline-block;
     position: relative;

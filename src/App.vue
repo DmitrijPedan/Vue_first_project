@@ -12,7 +12,6 @@
         v-bind:loading = "loading"
         v-on:closeCard="closeCard"/>
     </div>
-    <Footer class="footer"/>
   </div>
 </template>
 
@@ -21,7 +20,6 @@ import Header from './components/Header'
 import Loader from './components/Loader'
 import Sidebar from './components/Sidebar'
 import Main from './components/Main'
-import Footer from './components/Footer'
 import {fetchUsers} from './services/fetchUsers'
 
 export default {
@@ -36,7 +34,7 @@ export default {
   methods: {
     selectUser(id) {
         const select = this.allUsers.filter(el => el.login.uuid === id);
-        this.selectedUsers = select[0]
+        this.selectedUsers = select[0];
     },
     closeCard() {
         this.selectedUsers = null
@@ -52,7 +50,7 @@ export default {
       })()
   },
   components: {
-    Header, Loader, Sidebar, Main, Footer
+    Header, Loader, Sidebar, Main
   }
 }
 
@@ -65,6 +63,6 @@ export default {
   }
   .main {
     display: grid;
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: 1fr 70%;
   }
 </style>

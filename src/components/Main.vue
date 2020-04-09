@@ -1,6 +1,6 @@
 <template>
     <main>
-      <div >
+      <div class="cards-area">
         <UserCard 
           v-if="user"
           v-bind:user = "user" 
@@ -32,5 +32,11 @@ export default {
     color: orange;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+  }
+  .cards-area {
+    padding: 35px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>

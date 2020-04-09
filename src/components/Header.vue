@@ -1,6 +1,13 @@
 <template>
     <header>
-        <h1>Header</h1>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/vue.png" alt="vue">
+            </div>
+            <div class="title">
+                <h1>Vue first project</h1>
+            </div>
+        </div>
     </header>
 </template>
 
@@ -12,15 +19,23 @@ export default {
 
 <style lang="scss" scoped>
     header {
+        border-bottom: 1px solid gray;
+    }
+    .container {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        text-align: center;
-        background-color: silver;
+        width: 90%;
+        margin: auto;
+    }
+    img {
+        height: 50px;
+        width: 50px;;
     }
     h1 {
         margin: 20px;
-        color: white;
+        font-size: 16px;
+        color: rgb(27, 160, 109);
         font-family: Arial, Helvetica, sans-serif;
         text-transform: uppercase;
     }

@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p>Menu:</p>
-        <ul>
+        <p>Users ({{data.length}}):</p>
+        <md-list>
             <MenuItem 
                 v-for="(item, i) in data" 
                 v-bind:key="i+1" 
@@ -9,32 +9,41 @@
                 v-bind:number="i"
                 v-on:selectUser="selectUser"   
             />
-        </ul>
+        </md-list>
     </div>
 </template>
 
 <script>
 import MenuItem from './MenuItem'
 export default {
-    props: ['data'],
     name: 'Menu',
-    components: {
-        MenuItem,
-    },
+    props: ['data'],
     methods: {
         selectUser(id) {
             this.$emit('selectUser', id)
         }
-    }
+    },
+    components: {
+        MenuItem,
+    },
 }
 </script>
 
 <style lang="scss" scoped>
+    .md-list {
+        width: 320px;
+        max-width: 100%;
+        display: inline-block;
+        vertical-align: top;
+        border: 1px solid rgba(#000, .12);
+    }
     ul {
         padding: 0;
     }
     p {
-        margin: 3px;
+        text-align: center;
+        font-weight: 700;
+        margin: 0px 0px 10px 0px;
         color: orange;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 16px;

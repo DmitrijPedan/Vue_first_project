@@ -9,7 +9,8 @@
         v-on:selectUser="selectUser"/>
       <Main  
         v-bind:user = "selectedUsers" 
-        v-bind:loading = "loading"/>
+        v-bind:loading = "loading"
+        v-on:closeCard="closeCard"/>
     </div>
     <Footer class="footer"/>
   </div>
@@ -36,6 +37,9 @@ export default {
     selectUser(id) {
         const select = this.allUsers.filter(el => el.login.uuid === id);
         this.selectedUsers = select[0]
+    },
+    closeCard() {
+        this.selectedUsers = null
     }
   },
   mounted () {

@@ -13,20 +13,25 @@
         </md-card-header>
         <md-card-content>
           <h3>Info:</h3>
-            <p>age: {{user.dob.age}}</p>
-            <p>gender: {{user.gender}}</p>
-            <p>birth date: {{user.dob.date}}</p>
+            <p><strong>age:</strong> {{user.dob.age}}</p>
+            <p><strong>gender:</strong> {{user.gender}}</p>
+            <p><strong>birth date:</strong> {{user.dob.date}}</p>
           <h3>Contacts:</h3>
-            <p>email: {{user.email}}</p>
-            <p>phone: {{user.phone}}</p>
+            <p><strong>email:</strong> {{user.email}}</p>
+            <p><strong>phone:</strong> {{user.phone}}</p>
           <h3>Address:</h3>
-            <p>Country: {{user.location.country}}</p> 
-            <p>City: {{user.location.city}}</p>  
-            <p>Street: {{user.location.street.name}}, {{user.location.street.number}}</p> 
-            <p>Post code: {{user.location.postcode}}</p>
+            <p><strong>Country:</strong> {{user.location.country}}</p> 
+            <p><strong>City:</strong> {{user.location.city}}</p>  
+            <p><strong>Street:</strong> {{user.location.street.name}}, {{user.location.street.number}}</p> 
+            <p><strong>Post code:</strong> {{user.location.postcode}}</p>
         </md-card-content>
         <md-card-actions>
-          <md-button>Close</md-button>
+          <md-button 
+            class="md-primary"
+            v-on:click="$emit('closeCard')"
+          >
+          Close
+          </md-button>
         </md-card-actions>
       </md-card>
     </div>
@@ -40,52 +45,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.md-card {
+  .md-card {
     width: 320px;
     margin: 4px;
     display: inline-block;
     vertical-align: top;
   }
-
-  .md-card-example {
-    .md-subhead {
-      .md-icon {
-        $size: 16px;
-
-        width: $size;
-        min-width: $size;
-        height: $size;
-        font-size: $size !important;
-      }
-
-      span {
-        vertical-align: middle;
-      }
-    }
-
-    .card-reservation {
-      margin-top: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .md-icon {
-        margin: 8px;
-      }
-    }
-
-    .md-button-group {
-      display: flex;
-
-      .md-button {
-        min-width: 60px;
-        border-radius: 2px;
-      }
-    }
+  .md-title {
+    color: #01579B;
   }
   h3 {
     margin: 5px 0 0 0;
-    color: 900;
+    color: #00B0FF;
   }
   p {
     margin: 0;

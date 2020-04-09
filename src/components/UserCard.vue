@@ -49,11 +49,11 @@ export default {
       background-color: rgba(0, 0, 0, 0.292);
   }
   .md-card {
-    width: 320px;
-    max-height: 85%;
-    overflow-y: auto;
-    z-index: 15;
-    margin: 50px auto;
+      width: 320px;
+      max-height: 85%;
+      overflow-y: auto;
+      z-index: 15;
+      margin: 80px auto;
   }
   .md-title {
     color: rgb(255, 255, 255);

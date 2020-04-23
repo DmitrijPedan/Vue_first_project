@@ -36,12 +36,14 @@ export default {
         display: inline-block;
         vertical-align: top;
         border: 1px solid rgba(#000, .12);
+        overflow-y:scroll;
+        height: 80vh;
     }
     ul {
         padding: 0;
     }
     p {
-        text-align: center;
+        text-align: left;
         font-weight: 700;
         margin: 0px 0px 10px 0px;
         color: orange;

@@ -33,8 +33,7 @@ export default {
   },
   methods: {
     selectUser(id) {
-        const select = this.allUsers.filter(el => el.login.uuid === id);
-        this.selectedUsers = select[0];
+        this.selectedUsers = this.allUsers.find(el => el.login.uuid === id);
     },
     closeCard() {
         this.selectedUsers = null
@@ -64,5 +63,8 @@ export default {
   .main {
     display: grid;
     grid-template-columns: 1fr 70%;
+      @media (max-width: 992px) {
+        grid-template-columns: 1fr 1fr;
+      }
   }
 </style>

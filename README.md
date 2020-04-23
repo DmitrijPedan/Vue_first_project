@@ -1,5 +1,3 @@
-# topdevs_junior
-
 ## Project setup
 ```
 npm install

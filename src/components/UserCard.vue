@@ -1,5 +1,5 @@
 <template>
-    <div class="card-wrapper">
+    <div class="card-wrapper" v-on:click="$emit('closeCard')">
       <md-card>
         <md-card-header>
           <md-card-header-text>
@@ -40,6 +40,7 @@ export default {
 
 <style lang="scss" scoped>
   .card-wrapper {
+    @media (max-width: 576px) {
       position: fixed;
       z-index: 10;
       top: 0;
@@ -47,13 +48,16 @@ export default {
       bottom: 0;
       left: 0;
       background-color: rgba(0, 0, 0, 0.292);
+    }
   }
   .md-card {
       width: 320px;
       max-height: 85%;
       overflow-y: auto;
       z-index: 15;
-      margin: 80px auto;
+        @media (max-width: 576px) {
+          margin: 80px auto;
+        }
   }
   .md-title {
     color: rgb(255, 255, 255);
